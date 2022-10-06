@@ -6,7 +6,7 @@ This is a solution to the E-Commerce Product page. Frontend Mentor challenges he
 
 ### Links
 
-[Link to Live site URL](https://your-live-site-url.com)
+[Link to Live site URL](col-js-e-commerce-website.netlify.app)
 
 ### Built with
 

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-----Link for font--------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+  <!-----CSS link------>
+  <link rel="stylesheet" href="style.css"> 
+  <title>Frontend Mentor | E-commerce product page</title>
+  <!-- bootstrap link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <nav>
+        <div>
+          <img id="toggle_btn" onclick="showMenu()" src="images/icon-menu.svg" alt="icon menu">
+          <a href="#"><img src="images/logo.svg" alt="Sneakers"></a>
+        </div>
+        <div id="menu">
+          <img onclick="hideMenu()" src="images/icon-close.svg" alt="close btn">
+          <a href="">Collections</a>
+          <a href="">Men</a>
+          <a href="">Women</a>
+          <a href="">About</a>
+          <a href="">Contact</a>
+        </div>
+      </nav>
+
+      <div id="cart_section">
+        <ul>
+          <!-- <img  id="cart" src="images/icon-cart.svg" alt="cart"> -->
+          <li><img  id="cart" onclick="cartMenu()" src="images/icon-cart.svg" alt="cart"><p id="cartnum"></p>
+            <div id="cart-menu">
+              <div id="h3">
+                <p>cart</p>
+              </div>
+              <div id="purchased">
+                <div id="cartList">
+                  <div id="cartListImg">
+                    <img src="images/image-product-1-thumbnail.jpg" alt="thumbnails">
+                  </div>
+                  <div>
+                    <div id="cartListInfo">
+                      <p>Fall Limited Edition Sneakers</p>
+                      <p>$<span id="priced">125.00</span> x <span id="totalCart">0</span><span id="totals"> $<span id="total">375</span>.00</span></p>
+                    </div>
+                  </div>
+                  <div id="delete">
+                    <img src="images/icon-delete.svg" alt="delete">
+                  </div>
+                </div>
+                <button>
+                  <p>Checkout</p>
+                </button>
+                <!-- Your cart is empty -->
+              </div>
+            </div>
+          </li>
+        </ul>
+        <img id="avatar" src="images/image-avatar.png" alt="avatar" width="38">
+      </div>      
+    </header>
+    <section>
+      <div id="left_content">
+        <div id="expandedImgWrapper">
+          <img id="expandedImg" src="images/image-product-1.jpg" alt="product 1">
+          <div onclick="prev()" id="prevbtn">
+            <img src="images/icon-previous.svg" alt="previous">
+          </div>
+          <div onclick="next()" id="nextbtn">
+            <img src="images/icon-next.svg" alt="next">
+          </div>
+        </div>        
+        <div id="thumbnails">
+          <div class="thumbnails active"><img onclick="changeImg(this)" src="images/image-product-1.jpg" alt="product-1-thumbnail"></div>
+          <div class="thumbnails"><img  onclick="changeImg(this)" src="images/image-product-2.jpg" alt="product-2-thumbnail"></div>
+          <div class="thumbnails"><img  onclick="changeImg(this)"src="images/image-product-3.jpg" alt="product-3-thumbnail"></div>
+          <div class="thumbnails"><img  onclick="changeImg(this)"src="images/image-product-4.jpg" alt="product-4-thumbnail"></div>
+        </div>
+      </div>
+      <div id="right_content">
+        <h5>Sneaker Company</h5>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <div id="price_discount">
+          <div id="price">
+            <h2>$125.00</h2>
+            <p>50%</p>
+          </div>
+          <p id="discount">$250.00</p>
+        </div>
+        <div id="add-to-cart">
+          <div>
+            <div>
+              <img src="images/icon-minus.svg" onclick="minus()" alt="minus-btn">
+            </div>
+            <p id="num-of-product">0</p>
+            <div>
+              <img src="images/icon-plus.svg" onclick="plus()" alt="plus-btn">
+            </div>
+          </div>
+          <button id="addToCart">
+            <div>
+              <i class="bi bi-cart3"></i>
+            </div>
+            <p>Add to cart</p>
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="script.js" charset="UTF-8"></script>
+</body>
+</html>
